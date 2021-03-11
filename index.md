@@ -1,12 +1,17 @@
-# Google Personal/Shared Drive Index
+# Google Personal/Shared Drive Index [![](https://data.jsdelivr.com/v1/package/gh/ParveenBhadooOfficial/Bhadoo-Drive-Index/badge)](https://www.jsdelivr.com/package/gh/ParveenBhadooOfficial/Bhadoo-Drive-Index)
 
 * Supports Both My and Team/Shared Drives with Dark Mode.
+* Development Paused due to busy schedule.
 
 [![Screenshot](https://raw.githubusercontent.com/ParveenBhadooOfficial/Bhadoo-Drive-Index/master/images/beta-light-screenshot.png)](https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index)
 
 [![Screenshot](https://raw.githubusercontent.com/ParveenBhadooOfficial/Bhadoo-Drive-Index/master/images/beta-dark-screenshot.png)](https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index)
 
 `Note: The Changes in your workers config can effect later due to cache. Use incognito mode everytime to open the worker URL to overcome that issue.`
+
+## Project Website
+
+* [gdi.js.org](https://gdi.js.org) by [js.org](https://js.org)
 
 ## Demo Sites
 
@@ -16,7 +21,7 @@
 
 ## How to
 
-* Current Version `2.0.1`
+* Current Version `2.0.7`
 * Beta Version (Latest) - [generator.driveindex.ga](https://generator.driveindex.ga) (Dark Theme Available)
 * If you want to deploy main drive leave the option ROOT as it is.
 * If you want to deploy your Team Drive/Shared Drive/Folder then copy the ID and replace it with ROOT.
@@ -32,18 +37,38 @@
 * Now paste the code you copied before.
 * Click on Save and Deploy.
 * Done. (May take time for some users due to new account or cache issues)
-* [Watch Video](https://www.youtube.com/watch?v=8WMddzVX1Dw&feature=youtu.be)
+* [Watch Video](https://youtu.be/v3qNwHAWVKs)
 
 ## Basic Config
 
 ````
 "roots": [{
-	"id": "root", // shared drive id or folder id
-	"name": "Cloud Zero", // name for drive
-	"user": "admin", // username for id pass
-	"pass": "admin", // password for id pass (works also if their is no username, keep blank if no auth is needed.
-	"protect_file_link": true // protects the direct links when true.
+    "id": "root", // shared drive id or folder id
+    "name": "Cloud Zero", // name for drive
+    "user": "admin", // username for id pass
+    "pass": "admin", // password for id pass (works also if their is no username, keep blank if no auth is needed.
+    "protect_file_link": true // protects the direct links when true.
 }],
+````
+
+## Multiple ID Config
+
+````
+"roots": [{
+        "id": "root", // shared drive id or folder id
+        "name": "Cloud Zero", // name for drive
+        "user": "admin", // username for id pass
+        "pass": "admin", // password for id pass (works also if their is no username, keep blank if no auth is needed.
+        "protect_file_link": true // protects the direct links when true.
+    },
+    {
+        "id": "root", // shared drive id or folder id
+        "name": "Cloud Zero", // name for drive
+        "user": "admin", // username for id pass
+        "pass": "admin", // password for id pass (works also if their is no username, keep blank if no auth is needed.
+        "protect_file_link": true // protects the direct links when true.
+    },
+],
 ````
 
 ## Brand Customization and Dark Mode
@@ -56,15 +81,20 @@
 ````
 const uiConfig = {
 	"theme": "bhadoo_bootstrap", // Change doesn't works
-	"dark_mode": true, // Please select above theme before selecting here true or false
-	"version": "2.0", // don't touch this one. get latest code using generator at https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index
-	"logo_image": false, // Site Logo Name, can also be replaced with Image using <img border="0" alt="Alternative Name" src="logo-url" height="30px">
-	"logo_link_name": "Light Demo", // if logo is true then link otherwise just text for name
-	"contact_link": "https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index", //Link to Contact Button on Menu
+	"dark_mode": true, // switch between light or dark themes
+	"version": "2.0.7", // don't touch this one. get latest code using generator at https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index
+	"logo_image": true, // true if you're using image link in next option.
+	"logo_height": "", // only if logo_image is true
+	"logo_width": "100px", // only if logo_image is true
+	"logo_link_name": "https://cdn.jsdelivr.net/gh/jscdn/svg@1.0.3/bhadoo-cloud-logo-white.svg", // if logo is true then link otherwise just text for name
+	"contact_link": "https://t.telegram.ind.in/BhadooDiscussion", // Link to Contact Button on Menu
 	"copyright_year": "2050", // year of copyright, can be anything like 2015 - 2020 or just 2020
-	"company_name": "Search Google Web", // Name next to copyright
-	"company_link": "https://www.google.com/search?q=bhadoo-drive-index", // link of copyright name
+	"company_name": "Bhadoo Cloud", // Name next to copyright
+	"company_link": "https://t.telegram.ind.in/BhadooCloud", // link of copyright name
 	"credit": true, // Set this to true to give us credit
+	"display_size": true, // Set this to false to hide display file size
+	"display_time": false, // Set this to false to hide display modified time for folder and files
+	"disable_player": false // Set this to true to hide audio and video players
 };
 ````
 
@@ -75,25 +105,19 @@ const uiConfig = {
 
 ## Known Bugs
 
-* Current Path at File Destination shows `/`, which shouldn't appear.
 * Light Mode Text Hover Underline needs to be fixed.
-* Size and Modified Date should float on right side.
-* .zip/.rar files on Search doesn't works.
 
 ## Upcoming Changes
 
 * Clear Path to Navigate inside Previous Folders (currenty shows inside menu).
-* 3rd Party Video and Audio Players.
 * Icons from other Index for better view.
-* Custom Switch to Turn Off/On the Size and Modified Date Element.
-* Custom Dimensions for Logo.
 * Adding Links to other Indexes.
 * Adding More Features from other Indexes.
 * Click to Copy Download Button
 
-## Staging Site
+## Other Indexes
 
-* https://staging.hashhackers.workers.dev (Changes here are unstable, Testing New Bug Fixes and Development)
+* [Edited Version](https://gist.github.com/ParveenBhadooOfficial/52ffbfcfa24e53f8afad4851618307fc) based on [goindex-theme-acrou](https://github.com/Achrou/goindex-theme-acrou)
 
 ## Credits
 
