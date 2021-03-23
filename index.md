@@ -84,7 +84,7 @@
 const uiConfig = {
 	"theme": "dark", // switch between themes, default set to dark
 	"version": "2.0.9", // don't touch this one. get latest code using generator at https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index
-	"logo_image": true, // true if you're using image link in next option.
+	"dark_mode": true, // incase you're viewing wrong colors try switching this
 	"logo_height": "", // only if logo_image is true
 	"logo_width": "100px", // only if logo_image is true
 	"logo_link_name": "https://cdn.jsdelivr.net/gh/jscdn/svg@1.0.3/bhadoo-cloud-logo-white.svg", // if logo is true then link otherwise just text for name
@@ -103,7 +103,7 @@ const uiConfig = {
 
 ## Themes
 
-* There are 23 Themes from [bootswatch](https://github.com/thomaspark/bootswatch) where `light` is official [Bootstrap](https://getbootstrap.com) Theme and `dark` is darkly from bootswatch.
+* There are 22 Themes from [bootswatch](https://github.com/thomaspark/bootswatch) where `light` is official [Bootstrap](https://getbootstrap.com) Theme and `dark` is darkly from bootswatch.
 * You can check Theme from [bootswatch.com](https://bootswatch.com) before selecting.
 
 | Themes    |         |         |         |        |          |
@@ -113,6 +113,12 @@ const uiConfig = {
 | sandstone | simplex | sketchy | slate   | solar  | spacelab |
 | superhero | united  | yeti    | light   |        |          |
 |           |         |         |         |        |          |        
+
+## Audio and Video
+
+* Poster for Video is added as default.
+* If you wish to keep one poster add image link in Config.
+* You can also set poster name as eg. poster.jpg or screenshot.png where this file should be inside the same folder as the video file is.
 
 ## Search Limitations
 
