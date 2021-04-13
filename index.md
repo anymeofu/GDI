@@ -1,11 +1,11 @@
 # Google Personal/Shared Drive Index [![](https://data.jsdelivr.com/v1/package/gh/ParveenBhadooOfficial/Bhadoo-Drive-Index/badge)](https://www.jsdelivr.com/package/gh/ParveenBhadooOfficial/Bhadoo-Drive-Index) [![](https://data.jsdelivr.com/v1/package/gh/ParveenBhadooOfficial/Google-Drive-Index/badge)](https://www.jsdelivr.com/package/gh/ParveenBhadooOfficial/Google-Drive-Index) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FParveenBhadooOfficial%2FGoogle-Drive-Index&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 * Supports Both My and Team/Shared Drives with Dark Mode.
-* Development Paused due to busy schedule.
+* Click https://generator.driveindex.ga to make yours.
 
-[![Screenshot](https://raw.githubusercontent.com/ParveenBhadooOfficial/Bhadoo-Drive-Index/master/images/beta-light-screenshot.png)](https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index)
+[![Screenshot](https://raw.githubusercontent.com/ParveenBhadooOfficial/Bhadoo-Drive-Index/master/images/beta-light-screenshot.png)](https://generator.driveindex.ga/)
 
-[![Screenshot](https://raw.githubusercontent.com/ParveenBhadooOfficial/Bhadoo-Drive-Index/master/images/beta-dark-screenshot.png)](https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index)
+[![Screenshot](https://raw.githubusercontent.com/ParveenBhadooOfficial/Bhadoo-Drive-Index/master/images/beta-dark-screenshot.png)](https://generator.driveindex.ga/)
 
 `Note: The Changes in your workers config can effect later due to cache. Use incognito mode everytime to open the worker URL to overcome that issue.`
 
@@ -101,6 +101,8 @@ const uiConfig = {
 	"poster": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.10/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
 	"audioposter": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.10/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
 	"jsdelivr_cdn_src": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index", // If Project is Forked, then enter your Github repo
+	"render_head_md": true, // Render Head.md
+	"render_readme_md": true, // Render Readme.md
 	"plyr_io_version": "3.6.4" // Change plyr.io version in future when needed.
 }
 ````
@@ -116,14 +118,13 @@ const uiConfig = {
 | cerulean  | cosmo   | cyborg  | dark    | flatly | journal  |
 | litera    | lumen   | lux     | materia | minty  | pulse    |
 | sandstone | simplex | sketchy | slate   | solar  | spacelab |
-| superhero | united  | yeti    | light   |        |          |
-|           |         |         |         |        |          |        
+| superhero | united  | yeti    | light   |        |          |    
 
 ## Audio and Video
 
 * Poster for Video is added as default.
-* If you wish to keep one poster add image link in Config.
-* You can also set poster name as eg. poster.jpg or screenshot.png where this file should be inside the same folder as the video file is.
+* If you wish to keep one poster, add image link in Config.
+* You can also set poster link as eg. poster.jpg or screenshot.png where this file should be inside the same folder as the video file is.
 
 ## Search Limitations
 
@@ -132,11 +133,8 @@ const uiConfig = {
 
 ## Upcoming Changes
 
-* Clear Path to Navigate inside Previous Folders (currenty shows inside menu).
 * Icons from other Index for better view.
-* Adding Links to other Indexes.
 * Adding More Features from other Indexes.
-* Click to Copy Download Button
 
 ## Other Indexes
 
