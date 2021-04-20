@@ -76,7 +76,7 @@
             }
 ````
 
-## Multiple Users
+## Multiple Users Password
 
 * For single user
 
@@ -95,6 +95,13 @@
 * where `user1:pass1` and `user2:pass2` are combinations.
 * if users adds `"user": ["", ""],` empty values but more than one empty value then the site will ask for authentication but user can enter without entering any data by clicking submit.
 
+## Use of .password File
+
+* This is directory encryption added by the original author.
+* Add a .password file your required password in your folder which you want to protect, each folder should have its own .password file.
+* The password is stored inside the Google Drive Folder, not the index and the .password file is hidden an cannot be accessed using Index.
+* Example use https://bit.ly/3tBxXJN and password is `thispassword`
+
 ## Brand Customization and Dark Mode
 
 * In Latest Release, you can rebrand the Index as per your needs.
@@ -103,32 +110,40 @@
 * You can remove credit option but we request you not to.
 * See Below code to understand Customization.
 
-
 ````
 const uiConfig = {
-	"theme": "dark", // switch between themes, default set to dark, select from https://github.com/ParveenBhadooOfficial/Google-Drive-Index#themes
-	"dark_mode": true, // incase you're viewing wrong colors try switching this
-	"version": "2.0.15", // don't touch this one. get latest code using generator at https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index
-	"logo_image": true, // true if you're using image link in next option.
-	"logo_height": "", // only if logo_image is true
-	"logo_width": "100px", // only if logo_image is true
-	"logo_link_name": "https://cdn.jsdelivr.net/gh/jscdn/svg@1.0.3/bhadoo-cloud-logo-white.svg", // if logo is true then link otherwise just text for name
-	"contact_link": "https://t.telegram.ind.in/BhadooCloud", // Link to Contact Button on Menu
-	"copyright_year": "2050", // year of copyright, can be anything like 2015 - 2020 or just 2020
-	"company_name": "Bhadoo Cloud", // Name next to copyright
-	"company_link": "https://t.telegram.ind.in/BhadooCloud", // link of copyright name
-	"credit": true, // Set this to true to give us credit
-	"display_size": true, // Set this to false to hide display file size
-	"display_time": false, // Set this to false to hide display modified time for folder and files
-        "disable_player": false, // Set this to true to hide audio and video players
-	"poster": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.10/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
-	"audioposter": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.10/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
-	"jsdelivr_cdn_src": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index", // If Project is Forked, then enter your Github repo
-	"render_head_md": true, // Render Head.md
-	"render_readme_md": true, // Render Readme.md
-	"plyr_io_version": "3.6.4" // Change plyr.io version in future when needed.
+    "theme": "dark", // switch between themes, default set to dark, select from https://github.com/ParveenBhadooOfficial/Google-Drive-Index#themes
+    "dark_mode": true, // incase you're viewing wrong colors try switching this
+    "version": "2.0.15", // don't touch this one. get latest code using generator at https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index
+    "logo_image": true, // true if you're using image link in next option.
+    "logo_height": "", // only if logo_image is true
+    "logo_width": "100px", // only if logo_image is true
+    "logo_link_name": "https://cdn.jsdelivr.net/gh/jscdn/svg@1.0.3/bhadoo-cloud-logo-white.svg", // if logo is true then link otherwise just text for name
+    "contact_link": "https://t.telegram.ind.in/BhadooCloud", // Link to Contact Button on Menu
+    "copyright_year": "2050", // year of copyright, can be anything like 2015 - 2020 or just 2020
+    "company_name": "Bhadoo Cloud", // Name next to copyright
+    "company_link": "https://t.telegram.ind.in/BhadooCloud", // link of copyright name
+    "credit": true, // Set this to true to give us credit
+    "display_size": true, // Set this to false to hide display file size
+    "display_time": false, // Set this to false to hide display modified time for folder and files
+    "disable_player": false, // Set this to true to hide audio and video players
+    "poster": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.10/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
+    "audioposter": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.10/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
+    "jsdelivr_cdn_src": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index", // If Project is Forked, then enter your Github repo
+    "render_head_md": true, // Render Head.md
+    "render_readme_md": true, // Render Readme.md
+    "plyr_io_version": "3.6.4", // Change plyr.io version in future when needed.
+    "unauthorized_owner_link": "https://i.telegram.ind.in/TheFirstSpeedster", // Unauthorized Error Page Link to Owner
+    "unauthorized_owner_email": "admin@hashhackers.com", // Unauthorized Error Page Owner Email
+    "enable_arc": true, // If you want to use arc.io
+    "arc_code": "jfoY2h19" // arc.io Integraion Code, get yours from https://portal.arc.io
 }
 ````
+
+## arc.io Integration
+
+* Signup at arc.io
+* Add your site and enable arc in Customization with your code.
 
 ## Themes
 
