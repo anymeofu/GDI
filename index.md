@@ -4,8 +4,11 @@
 
 ## Full Whitelabel and Customizable Index | One of a kind
 
+* Discuss Problems here at [Discussions](https://github.com/ParveenBhadooOfficial/Google-Drive-Index/discussions)
 * Supports Both My and Team/Shared Drives with Dark Mode.
 * Click https://generator.driveindex.ga to make yours or watch https://youtu.be/Ihk4Gm3DPvg.
+
+[![](https://opengraph.githubassets.com/cc723ada47a587e6a6de9850ee06dc5e6eeeb8a33560e9313cafdebc4c18bb42/ParveenBhadooOfficial/Google-Drive-Index)](https://github.com/ParveenBhadooOfficial/Google-Drive-Index)
 
 [![Screenshot](https://raw.githubusercontent.com/ParveenBhadooOfficial/Bhadoo-Drive-Index/master/images/beta-light-screenshot.png)](https://youtu.be/Ihk4Gm3DPvg)
 
@@ -17,7 +20,7 @@
 
 * [gdi.js.org](https://gdi.js.org) by [js.org](https://js.org)
 
-## Demo Sites
+## Demo Sites (outdated)
 
 * [light-demo.ve.workers.dev](https://light-demo.ve.workers.dev)
 * [dark-demo.ve.workers.dev](https://dark-demo.ve.workers.dev)
@@ -25,8 +28,7 @@
 
 ## How to
 
-* Stable Release `2.0.15` on generator.driveindex.ga
-* Unstable Release `2.0.15-x` x here could be anything.
+* Stable Release `2.0.17-alpha.2` on generator.driveindex.ga
 * Beta Version (Latest) - [generator.driveindex.ga](https://generator.driveindex.ga) (Dark Theme Available)
 * If you want to deploy main drive leave the option ROOT as it is.
 * If you want to deploy your Team Drive/Shared Drive/Folder then copy the ID and replace it with ROOT.
@@ -47,16 +49,14 @@
 ## Basic Config
 
 ````
-    "roots": 
-	    [
+    "roots":[
 
 	    {
-	    "id": "",
-            "name": "Drive One",
-            "user": "",
-            "pass": "",
-            "protect_file_link": false
-            }
+	        "id": "",
+                "name": "Drive One",
+                "protect_file_link": false,
+                "auth": {"username":"password"}
+            },
 
             ],
 ````
@@ -66,34 +66,41 @@
 * Add this code for each drive. see cloudflare workers code for more info. (requires common sense)
 
 ````
-            ,
             {
-            "id": "",
-            "name": "Drive Two",
-            "user": ["user1", "user2"],
-            "pass": ["pass1", "pass2"],
-            "protect_file_link": false
+                "id": "",
+                "name": "Drive Two",
+                "protect_file_link": false,
+                //"auth":{"username":"password"}
             }
 ````
+
+## Service Account
+
+* Currently Single Service Account is supported.
+* set `"service_account": false` to `"service_account": true`
+* Replace {} with data from service account `file.json`
 
 ## Multiple Users Password
 
 * For single user
 
 ````
-            "user": "yourusername",
-            "pass": "yourpassword",
+            // "auth": {"username":"password"} /** remove double slash at starting of this line to use password. */
 ````
 
-* For multiple users (upto 5 users)
+* For multiple users (unlimited users)
 
 ````
-            "user": ["user1", "user2"],
-            "pass": ["pass1", "pass2"],
+      {
+          "id": "",
+          "name": "Drive Two",
+          "protect_file_link": false,
+          // "auth": { "user1":"pass1", "user2":"pass2", }  /** remove double slash at starting of this line to use password. */
+      },
 ````
 
-* where `user1:pass1` and `user2:pass2` are combinations.
-* if users adds `"user": ["", ""],` empty values but more than one empty value then the site will ask for authentication but user can enter without entering any data by clicking submit.
+* where `"user1":"pass1"` and `"user2":"pass2"` are combinations.
+* if users adds `"auth":{"":""}` empty values then the site will ask for authentication but user can enter without entering any data by clicking submit.
 
 ## Use of .password File
 
@@ -102,23 +109,24 @@
 * The password is stored inside the Google Drive Folder, not the index and the .password file is hidden an cannot be accessed using Index.
 * Example use https://bit.ly/3tBxXJN and password is `thispassword`
 
-## Brand Customization and Dark Mode
+## Brand Customization
 
 * In Latest Release, you can rebrand the Index as per your needs.
-* Line 57 will help you select light or dark theme where false is light and true will be dark theme.
-* After that each line has its own custom feature. Edit as per your needs.
+* Each line has its own custom feature. Edit as per your needs.
 * You can remove credit option but we request you not to.
 * See Below code to understand Customization.
 
 ````
 const uiConfig = {
     "theme": "dark", // switch between themes, default set to dark, select from https://github.com/ParveenBhadooOfficial/Google-Drive-Index#themes
-    "dark_mode": true, // incase you're viewing wrong colors try switching this
-    "version": "2.0.15", // don't touch this one. get latest code using generator at https://github.com/ParveenBhadooOfficial/Bhadoo-Drive-Index
+    "version": "2.0.17-alpha.2", // don't touch this one. get latest code using generator at https://generator.driveindex.ga
+    // If you're using Image then set to true, If you want text then set it to false
     "logo_image": true, // true if you're using image link in next option.
     "logo_height": "", // only if logo_image is true
     "logo_width": "100px", // only if logo_image is true
-    "logo_link_name": "https://cdn.jsdelivr.net/gh/jscdn/svg@1.0.3/bhadoo-cloud-logo-white.svg", // if logo is true then link otherwise just text for name
+    // if logo is true then link otherwise just text for name
+    "logo_link_name": "https://cdn.jsdelivr.net/gh/jscdn/svg@1.0.3/bhadoo-cloud-logo-white.svg",
+    "fixed_header": false, // If you want the header to be flexible or fixed.
     "contact_link": "https://t.telegram.ind.in/BhadooCloud", // Link to Contact Button on Menu
     "copyright_year": "2050", // year of copyright, can be anything like 2015 - 2020 or just 2020
     "company_name": "Bhadoo Cloud", // Name next to copyright
@@ -133,8 +141,8 @@ const uiConfig = {
     "render_head_md": true, // Render Head.md
     "render_readme_md": true, // Render Readme.md
     "plyr_io_version": "3.6.4", // Change plyr.io version in future when needed.
-    "unauthorized_owner_link": "https://i.telegram.ind.in/TheFirstSpeedster", // Unauthorized Error Page Link to Owner
-    "unauthorized_owner_email": "admin@hashhackers.com", // Unauthorized Error Page Owner Email
+    "unauthorized_owner_link": "https://i.telegram.ind.in/BhadooCloud", // Unauthorized Error Page Link to Owner
+    "unauthorized_owner_email": "enter your email here", // Unauthorized Error Page Owner Email
     "enable_arc": true, // If you want to use arc.io
     "arc_code": "jfoY2h19" // arc.io Integraion Code, get yours from https://portal.arc.io
 }
@@ -144,6 +152,7 @@ const uiConfig = {
 
 * Signup at arc.io
 * Add your site and enable arc in Customization with your code.
+* Change arc_code in configuration, get code from arc website.
 
 ## Themes
 
