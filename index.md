@@ -28,7 +28,7 @@
 
 ## How to
 
-* Stable Release `2.0.17-alpha.2` on generator.driveindex.ga
+* Stable Release `2.0.17-alpha.3` on generator.driveindex.ga
 * Beta Version (Latest) - [generator.driveindex.ga](https://generator.driveindex.ga) (Dark Theme Available)
 * If you want to deploy main drive leave the option ROOT as it is.
 * If you want to deploy your Team Drive/Shared Drive/Folder then copy the ID and replace it with ROOT.
@@ -76,7 +76,7 @@
 
 ## Service Account
 
-* Currently Single Service Account is supported.
+* Multiple Service Accounts are supported.
 * set `"service_account": false` to `"service_account": true`
 * Replace {} with data from service account `file.json`
 
@@ -119,7 +119,7 @@
 ````
 const uiConfig = {
     "theme": "dark", // switch between themes, default set to dark, select from https://github.com/ParveenBhadooOfficial/Google-Drive-Index#themes
-    "version": "2.0.17-alpha.2", // don't touch this one. get latest code using generator at https://generator.driveindex.ga
+    "version": "2.0.17-alpha.3", // don't touch this one. get latest code using generator at https://generator.driveindex.ga
     // If you're using Image then set to true, If you want text then set it to false
     "logo_image": true, // true if you're using image link in next option.
     "logo_height": "", // only if logo_image is true
@@ -144,7 +144,7 @@ const uiConfig = {
     "unauthorized_owner_link": "https://i.telegram.ind.in/BhadooCloud", // Unauthorized Error Page Link to Owner
     "unauthorized_owner_email": "enter your email here", // Unauthorized Error Page Owner Email
     "enable_arc": true, // If you want to use arc.io
-    "arc_code": "jfoY2h19" // arc.io Integraion Code, get yours from https://portal.arc.io
+    "arc_code": "jfoY2h19" // arc.io Integration Code, get yours from https://portal.arc.io
 }
 ````
 
@@ -159,7 +159,7 @@ const uiConfig = {
 
 * There are 22 Themes from [bootswatch](https://github.com/thomaspark/bootswatch) where `light` is official [Bootstrap](https://getbootstrap.com) Theme and `dark` is darkly from bootswatch.
 * You can check Theme from [bootswatch.com](https://bootswatch.com) before selecting.
-* To Change theme, first generate the code, paste in Cloudflare Workers and then select one theme code from below and paste it in line 66 of worker script.
+* To Change theme, first generate the code, paste in Cloudflare Workers and then select one theme code from below and paste it in line 37 of worker script.
 
 | Themes    |         |         |         |        |          |
 |-----------|---------|---------|---------|--------|----------|
@@ -178,6 +178,13 @@ const uiConfig = {
 
 * Search only works if you use Shared Drive ID or root.
 * Search won't work or the bar won't appear if you're using Folder ID inside from root or Shared Drive.
+
+## Sorting by Name or Modified Time
+
+* Find `params.orderBy` in workers code.
+* use `params.orderBy = 'folder,name,modifiedTime desc';` to sort by File and Folder Name.
+* use `params.orderBy = 'folder,modifiedTime desc,name';` to sort by Modified Time.
+* A comma-separated list of sort keys. Valid keys are 'createdTime', 'folder', 'modifiedByMeTime', 'modifiedTime', 'name', 'name_natural', 'quotaBytesUsed', 'recency', 'sharedWithMeTime', 'starred', and 'viewedByMeTime'. Each key sorts ascending by default, but may be reversed with the 'desc' modifier. Example usage: ?orderBy=folder,modifiedTime desc,name. Please note that there is a current limitation for users with approximately one million files in which the requested sort order is ignored.
 
 ## Making your own repo, editing and making changes
 
@@ -223,6 +230,7 @@ const uiConfig = {
 * Source: [yanzai](https://github.com/yanzai/goindex)
 * New Design: [Bootstrap](https://getbootstrap.com)
 * Cloudflare: Workers
+* Icons made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com)
 
 ## Disclaimer
 
