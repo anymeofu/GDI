@@ -3,8 +3,8 @@ addEventListener('fetch', event => {
 });
 
 const tokenURL = 'https://www.googleapis.com/oauth2/v4/token';
-const clientId = '58094879805-4654k2k5nqdid5bavft7fvea5u9po0t1.apps.googleusercontent.com';
-const clientSecret = 'ZNPZ-vS6N9Zjsyb_sNMZmXHL';
+const clientId = '631880027894-arjr76qnlubvjtaa8en2u0sllb9t40h2.apps.googleusercontent.com';
+const clientSecret = 'BtxIEhhim6bXLSqJXmLZZbrH';
 const grantType = 'authorization_code';
 const redirectURI = 'urn:ietf:wg:oauth:2.0:oob';
 const jsURL = 'https://raw.githubusercontent.com/anymeofu/GDI/master/worker/worker-beta.js';
