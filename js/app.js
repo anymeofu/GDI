@@ -827,8 +827,7 @@ ${UI.disable_video_download ? `` : `
   </div>
   <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button>
   </div>
-  <br></div>`;
-	    `}
+  <br></div>`}`;
     $('#content').html(content);
     });
 }
@@ -889,8 +888,7 @@ ${UI.disable_video_download ? `` : `
   </div>
   <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br></div>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js" integrity="sha256-fZOd7N/oofoKcO92RzxvC0wMm+EvsKyRT4nmcmQbgzU=" crossorigin="anonymous"></script>
-`;
-  `}
+`}`;
     $('#content').html(content);
     });
 
@@ -1014,7 +1012,7 @@ function file_audio(path) {
   <script>
    const player = new Plyr('#vplayer');
   </script></br>
-${UI.disable_video_download ? `` : `
+  ${UI.disable_video_download ? `` : `
   <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -1039,8 +1037,7 @@ ${UI.disable_video_download ? `` : `
   </div>
   </div>
   </div>
-  `;
-  `}
+  `}`;
     $('#content').html(content);
     });
 }
@@ -1119,7 +1116,7 @@ function file_pdf(path) {
   });
   </script>
   <div class="container"><br>
-${UI.disable_video_download ? `` : `
+  ${UI.disable_video_download ? `` : `
   <div class="card">
   <div class="card-body text-center">
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<br>${size}</div>
@@ -1155,8 +1152,7 @@ ${UI.disable_video_download ? `` : `
   </div>
   </div>
   </div>
-  `;
-  `}
+  `}`;
     $('#content').html(content);
     });
 }
@@ -1220,13 +1216,13 @@ function file_image(path) {
     var size = formatFileSize(obj.size);
     var content = `
   <div class="container"><br>
+  ${UI.disable_video_download ? `` : `
   <div class="card">
   <div class="card-body text-center">
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<br>${size}</div>
   <div>${targetText}</div><br>
   <img src="${url}" width="50%">
   </div>
-  ${UI.disable_video_download ? `` : `
   <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -1251,8 +1247,7 @@ function file_image(path) {
   </div>
   </div>
   </div>
-    `;
-    `}
+    `}`;
     // my code
     $('#content').html(content);
     });
