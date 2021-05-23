@@ -804,6 +804,7 @@ function file_others(path) {
 <div class="card-body text-center">
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<br>${size}</div>
 </div>
+${UI.disable_video_download ? `` : `
 <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -827,6 +828,7 @@ function file_others(path) {
   <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button>
   </div>
   <br></div>`;
+	    `}
     $('#content').html(content);
     });
 }
@@ -864,6 +866,7 @@ function file_code(path) {
 <pre class="line-numbers language-markup" data-src="plugins/line-numbers/index.html" data-start="-5" style="white-space: pre-wrap; counter-reset: linenumber -6;" data-src-status="loaded" tabindex="0"><code id="editor"></code></pre>
 </div>
 </div>
+${UI.disable_video_download ? `` : `
 <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -887,6 +890,7 @@ function file_code(path) {
   <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br></div>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.js" integrity="sha256-fZOd7N/oofoKcO92RzxvC0wMm+EvsKyRT4nmcmQbgzU=" crossorigin="anonymous"></script>
 `;
+  `}
     $('#content').html(content);
     });
 
@@ -1010,6 +1014,7 @@ function file_audio(path) {
   <script>
    const player = new Plyr('#vplayer');
   </script></br>
+${UI.disable_video_download ? `` : `
   <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -1035,6 +1040,7 @@ function file_audio(path) {
   </div>
   </div>
   `;
+  `}
     $('#content').html(content);
     });
 }
@@ -1113,6 +1119,7 @@ function file_pdf(path) {
   });
   </script>
   <div class="container"><br>
+${UI.disable_video_download ? `` : `
   <div class="card">
   <div class="card-body text-center">
   <div class="${UI.file_view_alert_class}" id="file_details" role="alert">${obj.name}<br>${size}</div>
@@ -1149,6 +1156,7 @@ function file_pdf(path) {
   </div>
   </div>
   `;
+  `}
     $('#content').html(content);
     });
 }
@@ -1218,6 +1226,7 @@ function file_image(path) {
   <div>${targetText}</div><br>
   <img src="${url}" width="50%">
   </div>
+  ${UI.disable_video_download ? `` : `
   <div class="card-body">
 <div class="input-group mb-4">
   <div class="input-group-prepend">
@@ -1243,6 +1252,7 @@ function file_image(path) {
   </div>
   </div>
     `;
+    `}
     // my code
     $('#content').html(content);
     });
