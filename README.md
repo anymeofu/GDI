@@ -1,45 +1,32 @@
-# Google Personal/Shared Drive Index 
+# Google Personal/Shared Drive Index
 
-[![](https://data.jsdelivr.com/v1/package/gh/ParveenBhadooOfficial/Bhadoo-Drive-Index/badge)](https://www.jsdelivr.com/package/gh/ParveenBhadooOfficial/Bhadoo-Drive-Index) [![](https://data.jsdelivr.com/v1/package/gh/ParveenBhadooOfficial/Google-Drive-Index/badge)](https://www.jsdelivr.com/package/gh/ParveenBhadooOfficial/Google-Drive-Index) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FParveenBhadooOfficial%2FGoogle-Drive-Index&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://github.com/ParveenBhadooOfficial/Google-Drive-Index)
+[![](https://data.jsdelivr.com/v1/package/npm/@googledrive/index/badge/year)](https://cdn.jsdelivr.net/npm/@googledrive/index)
+[![](https://data.jsdelivr.com/v1/package/npm/@googledrive/index/badge/month)](https://cdn.jsdelivr.net/npm/@googledrive/index)
+[![](https://data.jsdelivr.com/v1/package/npm/@googledrive/index/badge/week)](https://cdn.jsdelivr.net/npm/@googledrive/index)
+[![](https://data.jsdelivr.com/v1/package/npm/@googledrive/index/badge/day)](https://cdn.jsdelivr.net/npm/@googledrive/index)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://www.npmjs.com/package/@googledrive/index&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://www.npmjs.com/package/@googledrive/index)
 
-## Full Whitelabel and Customizable Index | One of a kind
+## Full White label and Customizable Index | One of a kind
 
-## IMPORTANT UPDATE
-
-* If your index stopped working, that means you're using old config, please generate new code with features and bug fixes. If you see UPDATE banner after new install, don't panic, wait 24-48 hours, it'll go away, its due to cloudflare cache or just generate code again as i've fixed since this update.
-
-### [Generate Code](https://gdi.js.org/build)
-
-* Discuss Problems here at [Discussions](https://github.com/ParveenBhadooOfficial/Google-Drive-Index/discussions)
 * Supports Both My and Team/Shared Drives with Dark Mode.
-* Click https://generator.driveindex.ga to make yours or watch https://youtu.be/Ihk4Gm3DPvg.
+* Click https://bdi-generator.hashhackers.com to make yours or watch https://youtu.be/Ihk4Gm3DPvg.
 
-[![](https://opengraph.githubassets.com/cc723ada47a587e6a6de9850ee06dc5e6eeeb8a33560e9313cafdebc4c18bb42/ParveenBhadooOfficial/Google-Drive-Index)](https://github.com/ParveenBhadooOfficial/Google-Drive-Index)
+[![Screenshot](https://gitlab.com/ParveenBhadooOfficial/Google-Drive-Index/-/raw/master/images/themes/vapor.png)](https://youtu.be/Ihk4Gm3DPvg)
 
-[![Screenshot](https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@master/images/themes/vapor.png)](https://youtu.be/Ihk4Gm3DPvg)
+[![Screenshot](https://gitlab.com/ParveenBhadooOfficial/Google-Drive-Index/-/raw/master/images/themes/darkly.png)](https://youtu.be/Ihk4Gm3DPvg)
 
-[![Screenshot](https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@master/images/themes/darkly.png)](https://youtu.be/Ihk4Gm3DPvg)
-
-`Note: The Changes in your workers config can effect later due to cache. Use incognito mode everytime to open the worker URL to overcome that issue.`
-
-## Project Website
-
-* [gdi.js.org](https://gdi.js.org) by [js.org](https://js.org)
-
-## Demo Site
-
-* [testing.fetchgoogleapi.workers.dev/](https://testing.fetchgoogleapi.workers.dev/)
+`Note: The Changes in your workers config can effect later due to cache. Use incognito mode every time to open the worker URL to overcome that issue.`
 
 ## How to
 
-* Stable Release `2.0.18` on generator.driveindex.ga
-* Beta Version (Latest) - [generator.driveindex.ga](https://generator.driveindex.ga) (Dark Theme Available)
+* Stable Release `2.0.20`
+* Beta Version (Latest) - [bdi-generator](https://bdi-generator.hashhackers.com) (For Dark Theme use darkly)
 * If you want to deploy main drive leave the option ROOT as it is.
 * If you want to deploy your Team Drive/Shared Drive/Folder then copy the ID and replace it with ROOT.
 * Eg. if you open this shared drive `https://drive.google.com/drive/u/0/folders/0AOM2i7MQiuWIUk9PVA` - `0AOM2i7MQiuWIUk9PVA` is its ID.
 * Authenticate and copy the code from Google and paste it into Authorization Code Box.
 * Click on Get Code to Generate Code and Copy it for later use.
-* Now Create Cloudflare account and verify email or login with existing account.
+* Now Create Cloud flare account and verify email or login with existing account.
 * Find Workers and Open it.
 * Create your sub-domain or continue if already done.
 * Select the Free Plan.
@@ -65,7 +52,7 @@
 
 ## Multiple ID Config
 
-* Add this code for each drive. see cloudflare workers code for more info. (requires common sense)
+* Add this code for each drive. see cloud flare workers code for more info. (requires common sense)
 
 ````
     "roots":[
@@ -128,67 +115,79 @@
 
 ````
 const uiConfig = {
-    "theme": "slate", // switch between themes, default set to vapor, select from https://github.com/ParveenBhadooOfficial/Google-Drive-Index#themes
-    "version": "2.0.18", // don't touch this one. get latest code using generator at https://generator.driveindex.ga
-    // If you're using Image then set to true, If you want text then set it to false
-    "logo_image": true, // true if you're using image link in next option.
-    "logo_height": "", // only if logo_image is true
-    "logo_width": "100px", // only if logo_image is true
-    "favicon": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.17-alpha.7/images/favicon.ico",
-    // if logo is true then link otherwise just text for name
-    "logo_link_name": "https://cdn.jsdelivr.net/gh/jscdn/svg@1.0.3/bhadoo-cloud-logo-white.svg",
-    "fixed_header": true, // If you want the footer to be flexible or fixed.
-    "header_padding": "60", // Value 60 for fixed header, Value 20 for flexible header. Required to be changed accordingly in some themes.
-    "fixed_footer": false, // If you want the footer to be flexible or fixed.
-    "header_style_class": "navbar-dark bg-primary", // navbar-dark bg-primary || navbar-dark bg-dark || navbar-light bg-light
-    "footer_style_class": "bg-primary", // bg-primary || bg-dark || bg-light
-    "css_a_tag_color": "white", // Color Name or Hex Code eg. #ffffff
-    "css_p_tag_color": "white", // Color Name or Hex Code eg. #ffffff
-    "folder_text_color": "white", // Color Name or Hex Code eg. #ffffff
-    "loading_spinner_class": "text-light", // https://getbootstrap.com/docs/5.0/components/spinners/#colors
-    "search_button_class": "btn-outline-success", // https://getbootstrap.com/docs/5.0/components/buttons/#examples
-    "path_nav_alert_class": "alert alert-primary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
-    "file_view_alert_class": "alert alert-danger", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
-    "file_count_alert_class": "alert alert-secondary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
-    "contact_link": "https://telegram.dog/Telegram", // Link to Contact Button on Menu
-    "copyright_year": "2050", // year of copyright, can be anything like 2015 - 2020 or just 2020
-    "company_name": "gdi.js.org", // Name next to copyright
-    "company_link": "https://telegram.dog/Telegram", // link of copyright name
-    "credit": true, // Set this to true to give us credit
-    "display_size": true, // Set this to false to hide display file size
-    "display_time": false, // Set this to false to hide display modified time for folder and files
-    "display_download": true, // Set this to false to hide download icon for folder and files on main index
-    "disable_player": false, // Set this to true to hide audio and video players
-    "custom_srt_lang": "", // Subtitle Language Code for Custom .vtt language.
-    "disable_video_download": false, // Remove Download, Copy Button on Videos
-    "second_domain_for_dl": false, // If you want to display other URL for Downloading to protect your main domain.
-    "downloaddomain": "https://testing.fetchgoogleapi.workers.dev", // If "second_domain_for_dl": true then enter downloaddomain otherwise keep empty. eg. https://workers.workersname.workers.dev No Trailing '/'
-    "poster": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.10/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
-    "audioposter": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index@2.0.10/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
-    "jsdelivr_cdn_src": "https://cdn.jsdelivr.net/gh/ParveenBhadooOfficial/Google-Drive-Index", // If Project is Forked, then enter your Github repo
-    "render_head_md": true, // Render Head.md
-    "render_readme_md": true, // Render Readme.md
-    "display_drive_link": false, // This will add a Link Button to Google Drive of that particular file.
-    "plyr_io_version": "3.6.4", // Change plyr.io version in future when needed.
-    "plyr_io_video_resolution": "16:9" // For reference, visit: https://github.com/sampotts/plyr#options
-    "unauthorized_owner_link": "https://telegram.dog/Telegram", // Unauthorized Error Page Link to Owner
-    "unauthorized_owner_email": "abuse@telegram.org", // Unauthorized Error Page Owner Email
-    "arc_code": "jfoY2h19" // arc.io Integraion Code, get yours from https://portal.arc.io
+  "theme": "slate", // switch between themes, default set to vapor, select from https://www.npmjs.com/package/@googledrive/index
+  "version": "2.0.20", // don't touch this one. get latest code using generator at https://bdi-generator.hashhackers.com
+  // If you're using Image then set to true, If you want text then set it to false
+  "logo_image": true, // true if you're using image link in next option.
+  "logo_height": "", // only if logo_image is true
+  "logo_width": "100px", // only if logo_image is true
+  "favicon": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.0.20/images/favicon.ico",
+  // if logo is true then link otherwise just text for name
+  "logo_link_name": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.0.20/images/bhadoo-cloud-logo-white.svg",
+  "fixed_header": true, // If you want the footer to be flexible or fixed.
+  "header_padding": "60", // Value 60 for fixed header, Value 20 for flexible header. Required to be changed accordingly in some themes.
+  "nav_link_1": "Home", // change navigation link name
+  "nav_link_3": "Current Path", // change navigation link name
+  "nav_link_4": "Contact", // change navigation link name
+  "fixed_footer": false, // If you want the footer to be flexible or fixed.
+  "hide_footer": true, // hides the footer from site entirely.
+  "header_style_class": "navbar-dark bg-primary", // navbar-dark bg-primary || navbar-dark bg-dark || navbar-light bg-light
+  "footer_style_class": "bg-primary", // bg-primary || bg-dark || bg-light
+  "css_a_tag_color": "white", // Color Name or Hex Code eg. #ffffff
+  "css_p_tag_color": "white", // Color Name or Hex Code eg. #ffffff
+  "folder_text_color": "white", // Color Name or Hex Code eg. #ffffff
+  "loading_spinner_class": "text-light", // https://getbootstrap.com/docs/5.0/components/spinners/#colors
+  "search_button_class": "btn btn-danger", // https://getbootstrap.com/docs/5.0/components/buttons/#examples
+  "path_nav_alert_class": "alert alert-primary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
+  "file_view_alert_class": "alert alert-danger", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
+  "file_count_alert_class": "alert alert-secondary", // https://getbootstrap.com/docs/4.0/components/alerts/#examples
+  "contact_link": "https://telegram.dog/Telegram", // Link to Contact Button on Menu
+  "copyright_year": "2050", // year of copyright, can be anything like 2015 - 2020 or just 2020
+  "company_name": "Bhadoo Cloud", // Name next to copyright
+  "company_link": "https://telegram.dog/Telegram", // link of copyright name
+  "credit": true, // Set this to true to give us credit
+  "display_size": true, // Set this to false to hide display file size
+  "display_time": false, // Set this to false to hide display modified time for folder and files
+  "display_download": true, // Set this to false to hide download icon for folder and files on main index
+  "disable_player": false, // Set this to true to hide audio and video players
+  "custom_srt_lang": "", // Subtitle Language Code for Custom .vtt language.
+  "disable_video_download": false, // Remove Download, Copy Button on Videos
+  "second_domain_for_dl": false, // If you want to display other URL for Downloading to protect your main domain.
+  "downloaddomain": "https://testing.fetchgoogleapi.workers.dev", // If "second_domain_for_dl": true then enter downloaddomain otherwise keep empty. eg. https://workers.workersname.workers.dev No Trailing '/'
+  "poster": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.0.20/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
+  "audioposter": "https://cdn.jsdelivr.net/npm/@googledrive/index@2.0.20/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
+  "jsdelivr_cdn_src": "https://cdn.jsdelivr.net/npm/@googledrive/index", // If Project is Forked, then enter your GitHub repo
+  "render_head_md": true, // Render Head.md
+  "render_readme_md": true, // Render Readme.md
+  "display_drive_link": false, // This will add a Link Button to Google Drive of that particular file.
+  "plyr_io_version": "3.6.4", // Change plyr.io version in future when needed.
+  "plyr_io_video_resolution": "16:9", // For reference, visit: https://github.com/sampotts/plyr#options
+  "unauthorized_owner_link": "https://telegram.dog/Telegram", // Unauthorized Error Page Link to Owner
+  "unauthorized_owner_email": "abuse@telegram.org", // Unauthorized Error Page Owner Email
+  "arc_code": "jfoY2h19", // arc.io Integration Code, get yours from https://portal.arc.io
+  "search_all_drives": false // turn this on to switch this to gdrive search application
 };
 ````
+## Second Domain Systems
+
+* set second_domain_for_dl to `true` first.
+* set downloaddomain to ur new index you're going to make below.
+* then make separate index on different cloudflare account with worker-beta-second-domain.js code.
+* change only refresh_token or SA and Drive IDs, don't touch anything else.
+* It's done.
 
 ## arc.io Integration
 
 * arc.io is embedded in code to support gdi.js.org
 * if you have approved arc.io account, use your code.
 * incase you don't have arc account and want to support us, please keep our arc.io code in your index.
-* if anyone doesn't want to support us and want to remove arc, remove [this](https://github.com/ParveenBhadooOfficial/Google-Drive-Index/blob/master/worker/worker-beta.js#L133) line from workers code.
+* if anyone doesn't want to support us and want to remove arc, remove L133 line from the workers code.
 
 ## Themes
 
 * There are 25 Themes from [bootswatch](https://github.com/thomaspark/bootswatch) official [Bootstrap](https://getbootstrap.com) Themes.
 * You can check Theme from [bootswatch.com](https://bootswatch.com) before selecting.
-* To Change theme, first generate the code, paste in Cloudflare Workers and then select one theme code from below and paste it in line 56 of worker script.
+* To Change theme, first generate the code, paste in Cloud flare Workers and then select one theme code from below and paste it in line 56 of worker script.
 
 | Themes    |         |         |         |        |          |
 |-----------|---------|---------|---------|--------|----------|
@@ -219,9 +218,9 @@ const uiConfig = {
 
 * Fork this Repo or Import.
 * Make your changes in `app.js` and `workers-beta.js` files.
-* Make a new release in Github.
+* Make a new release in GitHub.
 * Change jsDelivr CDN URL and version code in `workers-beta.js`.
-* Deploy in Cloudflare Workers.
+* Deploy in Cloud flare Workers.
 
 ## Get Google_Client_ID and Secret and Generate Token
 
@@ -235,14 +234,14 @@ const uiConfig = {
 * Select Scope as `https://www.googleapis.com/auth/drive` (wait few hours if Google Drive is not showing up if you've just enabled the scope) or
 * You can also enter manual scope `https://www.googleapis.com/auth/drive` and click on add to table and then save or update.
 * Proceed with Save and Continue.
-* Add your email id you want to use as test user, upto 100 emails maximum. (Because you are not verified)
+* Add your email id you want to use as test user, up to 100 emails maximum. (Because you are not verified)
 * In [Credentials Page](https://console.developers.google.com/apis/credentials) Click `Create Credentials` and then Click `OAuth Client ID`.
 * Select Desktop App.
 * Now you have your own CLIENT ID and CLIENT SECRET.
 * Copy your details and save for future use.
-* Copy [this](https://github.com/ParveenBhadooOfficial/Google-Drive-Index/blob/master/worker/worker-generator.js) code.
+* Copy worker-generator.js code.
 * Replace Line 6 and 7 with your own CLIENT ID and CLIENT SECRET.
-* Paste this code in Cloudflare Workers and follow the site.
+* Paste this code in Cloud flare Workers and follow the site.
 
 ## Upcoming Changes
 
@@ -250,7 +249,6 @@ const uiConfig = {
 
 ## Other Indexes
 
-* [Edited Version](https://gist.github.com/ParveenBhadooOfficial/52ffbfcfa24e53f8afad4851618307fc) based on [goindex-theme-acrou](https://github.com/Achrou/goindex-theme-acrou)
 * List of Few [Indexes](https://github.com/alx-xlx/goindex)
 
 ## Credits
@@ -258,19 +256,14 @@ const uiConfig = {
 * Source: [maple3142](https://github.com/maple3142/GDIndex)
 * Source: [yanzai](https://github.com/yanzai/goindex)
 * New Design: [Bootstrap](https://getbootstrap.com)
-* Cloudflare: Workers
+* Cloud flare: Workers
 
 ## Disclaimer
 
 * This project is not associated with Google, this project uses Google Drive API to Index Files and Folders.
 * These Index's are written by someone else, possibly by donva and [maple3142](https://github.com/maple3142/GDIndex).
-* Beta Version is redesigned using Bootstrap from Alpha Version by @ParveenBhadooOfficial.
-* This Repo was imported from [yanzai](https://github.com/yanzai/goindex) and then modified for personal use. After requests from many users made public with user requirements.
-
-## Privacy Policy
-
-* [Privacy Policy](https://gdi.js.org/privacy)
-* [LICENSE](https://github.com/ParveenBhadooOfficial/Google-Drive-Index/blob/master/LICENSE)
+* Beta Version is redesigned using Bootstrap from Alpha Version by [Parveen Bhadoo](https://twitter.com/ParveenBhadoo).
+* This Repo was imported from [yanzai](https://github.com/yanzai/goindex) and then modified for personal use.
 
 ## Support this Project
 
