@@ -7,7 +7,7 @@ const clientId = '631880027894-arjr76qnlubvjtaa8en2u0sllb9t40h2.apps.googleuserc
 const clientSecret = 'BtxIEhhim6bXLSqJXmLZZbrH';
 const grantType = 'authorization_code';
 const redirectURI = 'urn:ietf:wg:oauth:2.0:oob';
-const jsURL = 'https://github.com/anymeofyou/GDI@2.0.20/worker/worker-beta.js';
+const jsURL = 'https://raw.githubusercontent.com/anymeofu/GDI/2.0.20/worker/worker-beta.js';
 
 async function handleRequest(request) {
     let title = getParameterByName(request.url, 'site_name') || 'Anyme Drive Index';
