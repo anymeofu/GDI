@@ -64,7 +64,7 @@ const uiConfig = {
     "logo_image": false, // true if you're using image link in next option.
     "logo_height": "", // only if logo_image is true
     "logo_width": "100px", // only if logo_image is true
-    "favicon": "https://cdn.jsdelivr.net/gh/GDI@2.0.20/images/favicon.ico",
+    "favicon": "https://cdn.jsdelivr.net/gh/anymeofu/GDI@2.0.20/images/favicon.ico",
     // if logo is true then link otherwise just text for name
     "logo_link_name": "Anyme Drive Index",
     "fixed_header": true, // If you want the footer to be flexible or fixed.
@@ -97,9 +97,9 @@ const uiConfig = {
     "disable_video_download": false, // Remove Download, Copy Button on Videos
     "second_domain_for_dl": false, // If you want to display other URL for Downloading to protect your main domain.
     "downloaddomain": domain_for_dl, // Ignore this and set domains at top of this page after service accounts.
-    "poster": "https://cdn.jsdelivr.net/gh/GDI@2.0.20/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
-    "audioposter": "https://cdn.jsdelivr.net/gh/GDI@2.0.20/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
-    "jsdelivr_cdn_src": "https://cdn.jsdelivr.net/gh/GDI", // If Project is Forked, then enter your GitHub repo
+    "poster": "https://cdn.jsdelivr.net/gh/anymeofu/GDI@2.0.20/images/poster.jpg", // Video poster URL or see Readme to how to load from Drive
+    "audioposter": "https://cdn.jsdelivr.net/gh/anymeofu/GDI@2.0.20/images/music.jpg", // Video poster URL or see Readme to how to load from Drive
+    "jsdelivr_cdn_src": "https://cdn.jsdelivr.net/gh/anymeofu/GDI", // If Project is Forked, then enter your GitHub repo
     "render_head_md": true, // Render Head.md
     "render_readme_md": true, // Render Readme.md
     "display_drive_link": false, // This will add a Link Button to Google Drive of that particular file.
