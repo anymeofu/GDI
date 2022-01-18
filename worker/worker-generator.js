@@ -3,11 +3,11 @@ addEventListener('fetch', event => {
 });
 
 const tokenURL = 'https://www.googleapis.com/oauth2/v4/token';
-const clientId = '631880027894-arjr76qnlubvjtaa8en2u0sllb9t40h2.apps.googleusercontent.com';
-const clientSecret = 'BtxIEhhim6bXLSqJXmLZZbrH';
+const clientId = '746239575955-oao9hkv614p8glrqpvuh5i8mqfoq145b.apps.googleusercontent.com';
+const clientSecret = 'u5a1CSY5pNjdD2tGTU93TTnI';
 const grantType = 'authorization_code';
 const redirectURI = 'urn:ietf:wg:oauth:2.0:oob';
-const jsURL = 'https://raw.githubusercontent.com/anymeofu/GDI/2.0.20/worker/worker-beta.js';
+const jsURL = 'https://raw.githubusercontent.com/anymeofu/GDI/10.0.1/worker/worker-super.js';
 
 async function handleRequest(request) {
     let title = getParameterByName(request.url, 'site_name') || 'Anyme Drive Index';
@@ -45,7 +45,7 @@ async function handleRequest(request) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
-    <title>Anyme Drive Index Generator</title>
+    <title>Anyme Drive Index - Beta</title>
     <link rel="icon" type="image/x-icon" href="https://www.cloudflare.com/favicon.ico"/>
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.0.0/dist/slate/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
@@ -284,7 +284,7 @@ async function handleRequest(request) {
 <body">
 <div class="container">
     <br><br>
-    <a href="https://www.npmjs.com/package/@googledrive/index"><h3>Anyme Drive Index Creator</h3></a>
+    <a href="https://www.npmjs.com/package/@googledrive/index"><h3>Anyme Index Generator - Beta</h3></a>
     <br>
         <div>
             <h3>1. <a
@@ -319,7 +319,7 @@ async function handleRequest(request) {
     <div class="overflow-auto" style="background-color:#000;">
         <pre class="snippet"><code class="html js">${codeJS}</code></pre>
     </div>
-    <center><p>© <span id="year"></span> - Anymeofyou</p></center>
+    <center><p>© <span id="year"></span> - Dr. Metformin</p></center>
 </div>
 
 <script>
